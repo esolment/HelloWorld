@@ -16,3 +16,6 @@ install-requires = [ # List of required libraries
     "requests",
     "pandas"
 ]
+requires-minders = [
+    "esolment_Template"
+]
