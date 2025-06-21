@@ -1,6 +1,7 @@
 import asyncio
 import time
 from guardin_mind.manager import ConfigRead, limit_concurrency
+from guardin_mind import Mind
 
 class HelloWorld:
     def __init__(self):
@@ -12,6 +13,9 @@ class HelloWorld:
         '''
         An example of an ask() function that accepts a question and returns "Hello World"
         '''
+        mind = Mind()
+        template = mind.Template()
+        print(template.name)
         print(f"Prompt is: {prompt}")
 
         time.sleep(2)
@@ -28,4 +32,3 @@ class HelloWorld:
         await asyncio.sleep(2)
 
         return "Hello World"
-    
